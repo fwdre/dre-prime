@@ -1,4 +1,19 @@
-  local Aiming = loadstring(game:HttpGet("https://raw.githubusercontent.com/fwdre/prime-dre-paste/main/prime%20dre%20paste"))()
+                                -- OPEN SOURCED
+                                 -- OPEN SOURCED
+                                  -- OPEN SOURCED
+                                   -- OPEN SOURCED
+                                    -- OPEN SOURCED
+                                     -- OPEN SOURCED
+                                      -- OPEN SOURCED
+                                       -- OPEN SOURCED
+                                        -- OPEN SOURCED
+                                         -- OPEN SOURCED
+                                          -- OPEN SOURCED
+                                           -- OPEN SOURCED
+                                -- OPEN SOURCED
+                                 -- OPEN SOURCED
+                                  -- OPEN SOURCED -- OPEN SOURCED -- OPEN SOURCED -- OPEN SOURCED
+                                local Aiming = loadstring(game:HttpGet("https://raw.githubusercontent.com/fwdre/prime-dre-paste/main/prime%20dre%20paste", true))()
                             Aiming.TeamCheck(false)
                              
                             
@@ -15,8 +30,8 @@
                             local DaHoodSettings = {
                                 SilentAim = true,
                                 AimLock = false,
-                                Prediction = 0.131,
-                                AimLockKeybind = Enum.KeyCode.V
+                                Prediction = 0.14,
+                                AimLockKeybind = Enum.KeyCode.E
                             }
                             getgenv().DaHoodSettings = DaHoodSettings
                             
@@ -61,7 +76,29 @@
                                 -- // Return
                                 return __index(t, k)
                             end)
-                            
+                            local player = game.Players.LocalPlayer
+local mouse = player:GetMouse()
+
+mouse.KeyDown:Connect(function(key)
+
+    if key == "v" then
+        
+
+
+        if DaHoodSettings.SilentAim == false then
+        
+        DaHoodSettings.SilentAim = true
+        
+        else
+            
+        DaHoodSettings.SilentAim = false
+
+        end
+
+    end
+
+
+end)
                             -- // Aimlock
                             RunService:BindToRenderStep("AimLock", 0, function()
                                 if (DaHoodSettings.AimLock and Aiming.Check() and UserInputService:IsKeyDown(DaHoodSettings.AimLockKeybind)) then
